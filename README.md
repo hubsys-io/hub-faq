@@ -10,6 +10,8 @@ Project to implement TM and new technologies into laravel
 ## Main packages
 - [Laravel](https://laravel.com/)
 - [VueJs](https://vuejs.org/)
+- [Axios](https://axios-http.com/)
+- [TailwindCSS](https://tailwindcss.com/)
 
 ## Instalation
 1. Clone this repository
