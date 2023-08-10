@@ -1,13 +1,20 @@
 <template>
-  <p>
-    cuca beludo
-  </p>
+  <Navbar />
+  <FaqPage />
+
 </template>
 
 <script>
-  export default {
-    name: 'Dashboard',
-  }
+import Navbar from '../components/Navbar.vue'
+import FaqPage from '../components/FaqPage.vue'
+
+export default {
+  name: 'Dashboard',
+  components: {
+    Navbar,
+    FaqPage
+  },
+}
 </script>
 
 <style scoped>
