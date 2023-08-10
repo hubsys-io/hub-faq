@@ -16,8 +16,8 @@ Project to implement TM and new technologies into laravel
 ## Instalation
 1. Clone this repository
 2. Run `composer install` to install dependencies
-3. Run `npm install && npm run dev` to start the server
-4. Run `php artisan serve` to start the server 
+3. Cd into vue folder and run `npm install` to install dependencies
+4. On vue folder run `npm run dev` to compile assets
 
 ## Projects
 - [ ] FAQ pag
