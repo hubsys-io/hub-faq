@@ -1,5 +1,5 @@
-# Hubsys Manager
-Project to implement TM and new technologies into laravel
+# Hubsys FAQ
+Project to create a FAQ page for Hubsys
 
 ## Dependencies
 - [PHP >=8.1](https://www.php.net/)
@@ -19,5 +19,5 @@ Project to implement TM and new technologies into laravel
 3. Cd into vue folder and run `npm install` to install dependencies
 4. On vue folder run `npm run dev` to compile assets
 
-## Projects
-- [ ] FAQ pag
+## Screenshots
+![image](public/screenshot.png)
