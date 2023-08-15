@@ -21,4 +21,12 @@ class FaqTest extends TestCase
             $this->assertIsInt($faq->id);
         }
     }
+
+    /** @test */
+    public function testFaqApiResponse(): void
+    {
+        $response = $this->get('/api/faq');
+
+        $response->assertStatus(200);
+    }
 }
