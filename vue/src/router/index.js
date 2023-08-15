@@ -1,5 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
+import store from "../store"
+
 import Dashboard from '../views/Dashboard.vue'
 import NotFound from '../views/NotFound.vue'
 
