@@ -16,8 +16,10 @@ Project to create a FAQ page for Hubsys
 ## Instalation
 1. Clone this repository
 2. Run `composer install` to install dependencies
-3. Cd into vue folder and run `npm install` to install dependencies
-4. On vue folder run `npm run dev` to compile assets
+3. Run `php artisan key:generate` to generate a key 
+4. Run `php artisan serve` to start the endpoint
+5. Cd into vue folder and run `npm install` to install dependencies
+6. Run `npm run dev` to compile assets
 
 ## Screenshots
 ![image](public/screenshot.png)
