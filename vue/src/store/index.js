@@ -1,12 +1,12 @@
-import { createStore } from "vuex"
-import axiosClient from "../axios"
+import { createStore } from "vuex";
+import axiosClient from "../axios";
 
 const store = createStore({
   state: {
     faq: {
       loading: false,
       data: [],
-    }
+    },
   },
   getters: {
     faqData: (state) => state.faq.data,
@@ -17,7 +17,7 @@ const store = createStore({
       commit("setLoading", true);
       try {
         const response = await axiosClient.get("/faq");
-        commit("setFaq", response.data);
+        commit("setFaq", response.data.data);
       } catch (error) {
         console.error(error);
       } finally {
@@ -33,7 +33,6 @@ const store = createStore({
       state.faq.loading = isLoading;
     },
   },
-  modules: {},
-})
+});
 
-export default store
+export default store;

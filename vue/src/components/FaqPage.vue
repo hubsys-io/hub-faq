@@ -49,8 +49,7 @@
 </template>
 
 <script setup>
-import { ref, computed } from "vue";
-import { onMounted } from "vue";
+import { ref, computed, onMounted } from "vue";
 import { useStore } from "vuex";
 
 const store = useStore();
@@ -58,35 +57,18 @@ const store = useStore();
 const faqData = computed(() => store.getters.faqData);
 const faqLoading = computed(() => store.getters.faqLoading);
 
-onMounted(() => {
-  store.dispatch("fetchFaq");
+const itemsPerPage = 6;
+const currentPage = ref(1);
+
+const totalPages = computed(() => Math.ceil(faqData.value.length / itemsPerPage));
+
+const paginatedFaqs = computed(() => {
+  const startIdx = (currentPage.value - 1) * itemsPerPage;
+  const endIdx = startIdx + itemsPerPage;
+  return faqData.value.slice(startIdx, endIdx);
+});
+
+onMounted(async () => {
+  await store.dispatch("fetchFaq");
 });
 </script>
-
-<script>
-export default {
-  data() {
-    return {
-      faqs: [
-        {
-          question: 'teste',
-          answer: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, dignissimos. Neque eos, dignissimos provident reiciendis debitis repudiandae commodi perferendis et itaque, similique fugiat cumque impedit iusto vitae dolorum. Nostrum, fugit!!"
-        },
-      ],
-      itemsPerPage: 6,
-      currentPage: 1
-    };
-  },
-  computed: {
-    totalPages() {
-      return Math.ceil(this.faqs.length / this.itemsPerPage);
-    },
-    paginatedFaqs() {
-      const startIdx = (this.currentPage - 1) * this.itemsPerPage;
-      const endIdx = startIdx + this.itemsPerPage;
-      return this.faqs.slice(startIdx, endIdx);
-    }
-  },
-}
-</script>
-
