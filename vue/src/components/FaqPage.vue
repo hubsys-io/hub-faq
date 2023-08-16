@@ -1,22 +1,22 @@
 <template>
   <div class="px-8">
-  <div class="px-4">
-    <div class="bg-white p-4 rounded-lg shadow-xl py-8 mt-12">
+    <div class="px-4">
+      <div class="bg-white p-4 rounded-lg shadow-xl py-8 mt-12">
         <h4 class="text-4xl font-bold text-gray-800 tracking-widest uppercase text-center">FAQ</h4>
         <p class="text-center text-gray-600 text-sm mt-2">Here are some of the frequently asked questions</p>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 xl:gap-12 px-2 xl:px-12 mt-4">
-            <div v-for="(faq, index) in paginatedFaqs" :key="index">
-              <div class="flex space-x-8 mt-8">
-                  <div>
-                      <h4 class="text-xl font-bold text-gray-700">{{ faq.question }}</h4>
-                      <p class="text-gray-600 my-2">{{ faq.answer }}</p>
-                      <!-- <a href="#" class="text-japanese-laurel-800 hover:text-japanese-laurel-900 hover:underline capitalize" title="Read More">Read More</a> -->
-                  </div>
+          <div v-for="(faq, index) in paginatedFaqs" :key="index">
+            <div class="flex space-x-8 mt-8">
+              <div>
+                <h4 class="text-xl font-bold text-gray-700">{{ faq.question }}</h4>
+                <p class="text-gray-600 my-2">{{ faq.answer }}</p>
+                <!-- <a href="#" class="text-japanese-laurel-800 hover:text-japanese-laurel-900 hover:underline capitalize" title="Read More">Read More</a> -->
               </div>
+            </div>
           </div>
         </div>
+      </div>
     </div>
-</div>
 
     <div class="flex justify-center mt-4 mb-4">
       <nav>

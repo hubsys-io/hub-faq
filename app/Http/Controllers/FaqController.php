@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\Faq;
 
 class FaqController extends Controller
@@ -12,7 +11,7 @@ class FaqController extends Controller
         $faqs = Faq::all();
 
         return response()->json([
-            'data' => $faqs
+            'data' => $faqs,
         ]);
     }
 
