@@ -21,5 +21,9 @@ Project to create a FAQ page for Hubsys
 5. Cd into vue folder and run `npm install` to install dependencies
 6. Run `npm run dev` to compile assets
 
+## TODO
+- [ ] Improve performance
+- [ ] Translations
+
 ## Screenshots
 ![image](public/screenshot.png)
