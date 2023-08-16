@@ -22,7 +22,6 @@ Project to create a FAQ page for Hubsys
 6. Run `npm run dev` to compile assets
 
 ## TODO
-- [ ] Improve performance
 - [ ] Translations
 
 ## Screenshots
