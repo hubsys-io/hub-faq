@@ -69,17 +69,15 @@
                   <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
                 </svg>
               </button>
-              <transition name="faq-collapse">
-                <div
-                  v-show="isOpen(index)"
-                  :id="'faq-answer-' + index"
-                  class="px-6 pb-4 text-gray-600 text-sm"
-                >
-                  {{ faq.answer }}
-                </div>
-              </transition>
               <div
-                v-if="!isOpen(index)"
+                v-if="isOpen(index)"
+                :id="'faq-answer-' + index"
+                class="px-6 pb-4 text-gray-600 text-sm"
+              >
+                {{ faq.answer }}
+              </div>
+              <div
+                v-else
                 class="px-6 pb-4 text-gray-600 text-sm"
               >
                 <span>
@@ -143,7 +141,6 @@ import { useStore } from "vuex";
 const store = useStore();
 
 const faqData = computed(() => store.getters.faqData);
-const faqLoading = computed(() => store.getters.faqLoading);
 const loading = ref(true);
 
 const itemsPerPage = 6;
@@ -195,20 +192,4 @@ onMounted(async () => {
 </script>
 
 <style scoped>
-.faq-collapse-enter-active,
-.faq-collapse-leave-active {
-  transition: max-height 0.25s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.2s;
-}
-.faq-collapse-enter-from,
-.faq-collapse-leave-to {
-  max-height: 0;
-  opacity: 0;
-  overflow: hidden;
-}
-.faq-collapse-enter-to,
-.faq-collapse-leave-from {
-  max-height: 200px;
-  opacity: 1;
-  overflow: hidden;
-}
 </style>
