@@ -1,7 +1,7 @@
 <template>
   <section class="flex flex-col min-h-screen bg-zinc-100 dark:bg-dark">
     <header
-      class="sticky top-0 z-10 bg-white/90 backdrop-blur border-b border-gray-200 px-6 py-4 flex flex-col md:flex-row md:items-center md:justify-between gap-2 shadow-sm"
+      class="sticky top-0 z-40 bg-white/90 backdrop-blur border-b border-gray-200 px-6 py-4 flex flex-col md:flex-row md:items-center md:justify-between gap-2 shadow-sm"
     >
       <h4 class="text-2xl font-bold text-gray-800 tracking-widest uppercase">FAQ</h4>
       <div class="flex-1 flex justify-center md:justify-end">
