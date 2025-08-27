@@ -143,7 +143,7 @@ const store = useStore();
 const faqData = computed(() => store.getters.faqData);
 const loading = ref(true);
 
-const itemsPerPage = 6;
+const itemsPerPage = 8;
 const currentPage = ref(1);
 const searchTerm = ref('');
 
