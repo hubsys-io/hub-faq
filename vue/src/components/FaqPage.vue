@@ -147,7 +147,6 @@ const itemsPerPage = 6;
 const currentPage = ref(1);
 const searchTerm = ref('');
 
-// Collapsible logic
 const openIndexes = ref(new Set());
 const previewLength = 120;
 
