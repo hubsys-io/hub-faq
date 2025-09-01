@@ -22,7 +22,8 @@ return [
     'allowed_origins' => [
         'http://localhost:*',
         'http://54.237.207.124:*',
-        'https://msg.hubsys.io:8000',
+	'https://msg.hubsys.io:8000',
+	'https://hub.hubsys.io:*',
         'http://54.160.84.89:*',
     ],
 
